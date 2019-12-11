@@ -9,5 +9,7 @@
           中 山 ク リ ー ニ ン グ
       %ul#globalNavi.clearfix
         %li 料金
-        %li 新規登録
-        %li ログイン
+        %li 
+          = link_to "新規登録", new_user_registration_path,class: "btn btn-globalNavi"
+        %li 
+          = link_to "ログイン", new_user_session_path, class: "btn btn-globalNavi"
