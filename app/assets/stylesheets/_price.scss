@@ -1,0 +1,31 @@
+.prices {
+  background-color: #00aaff;
+  height: calc(100vh - 138px);
+  width: 100%;
+  padding:0 200px;
+  display: flex;
+} 
+
+.price {
+  margin-top: 80px;
+  height: 480px;
+  width: 310px;
+  border: solid 10px #ffff1a;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #00aaff;
+}
+.price h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.price h4 {
+  margin-top: 20px;
+}
+
+.p_list li{
+  margin-bottom: 5px;
+}

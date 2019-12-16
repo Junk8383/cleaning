@@ -1,0 +1,157 @@
+.order_body {
+  background-color: #00aaff;
+  height: calc(100vh - 158px);
+  width: 100%;
+  padding-top: 20px;
+}
+.order_title {
+  margin-bottom: 20px;
+  & h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+}
+.order_form {
+  margin: 0 150px;
+  display: flex;
+  justify-content: center;
+}
+
+/*フォームの左側*/
+.form_left {
+  width: 250px;
+  padding: 20px;
+  border: solid 10px #ffff1a ;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #00aaff;
+  margin-right: 50px;
+  & p {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .new_order {
+    padding-left: 35px;
+    & ul {
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .field {
+    display: flex;
+    margin-bottom: 7px;
+    & label {
+      margin-right: 10px;
+      width:120px;
+      float: left;
+    }
+    .field-input input{
+      width: 40px;
+     
+    }
+  }
+}
+
+/*フォームの右側*/
+.form_right {
+  width: 310px;
+  margin-left: 50px;
+  .address_field {
+    width: 260px;
+    padding: 20px 20px 10px 20px;
+    border: solid 10px #ffff1a ;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #00aaff;
+    & p {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .address_label {
+
+    }
+    .address_input {
+
+      & textarea {
+        width: 250px;
+        height: 50px;
+        resize: none;
+      }
+      & textarea:focus::placeholder {
+        color: transparent;
+      }
+      & textarea::placeholder {
+        color: #00aaff;
+        opacity: 0.5;
+      }
+    }
+  }
+  .time_field {
+    width: 260px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: solid 10px #ffff1a ;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #00aaff;
+    & p {
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .time_label {
+      
+    }
+    .time_input {
+      & select {
+        height: 25px;
+      }
+    }
+  }
+  .tel_field {
+    width: 260px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: solid 10px #ffff1a ;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #00aaff;
+    & p {
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .tel_label {
+
+    }
+    .tel_input input{
+      width: 210px;
+    }
+  }
+}
+
+/*送信*/
+.submit {
+  text-align: center;  
+}
+.submit_btn {
+  display: inline-block;
+  margin-top: 50px;
+  border: solid 3px #ffff1a ;
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+}

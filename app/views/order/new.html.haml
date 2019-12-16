@@ -1,0 +1,89 @@
+= render "devices/shared/user_top"
+.order_body
+  .order_title
+    %h3 注文フォーム
+    = form_for @order,url: confirm_order_index_path  do |f|
+      .order_form
+        .form_left
+          %p １ 注文を選択してください
+          %ul.field_form
+            %li.field
+              .field-label
+                = f.label :tshirt,"Tシャツ   :"
+              .field-input
+                = f.number_field :tshirt,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :shirt,"シャツ    :"
+              .field-input
+                = f.number_field :shirt,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :suit,"スーツ    :"
+              .field-input
+                = f.number_field :suit,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :sweater,"セーター   :"
+              .field-input
+                = f.number_field :sweater,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :cardigan,"カーディガン :"
+              .field-input
+                = f.number_field :cardigan,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :blouse,"ブラウス   :"
+              .field-input
+                = f.number_field :blouse,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :othertops,"その他トップス:"
+              .field-input
+                = f.number_field :othertops,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :pants,"パンツ    :"
+              .field-input
+                = f.number_field :pants,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :skirt,"スカート   :"
+              .field-input
+                = f.number_field :skirt,value: 0,min: 0
+
+            %li.field
+              .field-label
+                = f.label :onepiece,"ワンピース  :"
+              .field-input
+                = f.number_field :onepiece,value: 0,min: 0
+        .form_right
+          .address_field
+            %p 2 住所を入力してください
+            .address_label
+              = f.label :address,"住所"
+            .address_input
+              = f.text_area :address,placeholder: "(例) 福岡県福岡市博多区中洲4丁目6−12 プラート中洲8F"
+          .time_field
+            %p 3 時間を選択してください
+            .time_label
+              = f.label :recivetime,"受け取り時間"
+            .time_input
+              = f.select :receivetime,["時間を指定してください","PM 1:00 〜 PM 2:00","PM 2:00 〜 PM 3:00","PM 3:00 〜 PM 4:00","PM 4:00 〜 PM 5:00"]
+          .tel_field
+            %p 4 電話番号を入力してください
+            .tel_label
+              = f.label :tel,"電話番号"
+            .tel_input
+              = f.telephone_field :tel,placeholder: "ハイフンを入れてください"
+      .submit 
+        = f.submit "送信",class: "submit_btn"
