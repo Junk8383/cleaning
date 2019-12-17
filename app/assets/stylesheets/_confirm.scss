@@ -1,0 +1,75 @@
+.co_body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00aaff;
+  padding-top: 100px;
+}
+.co_content { 
+  background-color: #ffffff;
+  width: 350px;
+  margin: 0 auto;
+  border: solid 10px #ffff1a ;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 10px;
+  & h4 {
+    font-size: 40px;
+    color: #00aaff;
+  }
+  .co_sum {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .co_address {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .co_time {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .co_tel  {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  & h6 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #00aaff;
+  }
+  & h5 {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+.co_form {
+  display: flex;
+  justify-content: center;
+}
+.co_back {
+  display: inline-block;
+  margin-top: 50px;
+  border: solid 3px #ffff1a ;
+  width: 200px;
+  height: 50px;
+  padding: 0 30px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  margin-right: 40px;
+  border-radius: 4px;
+}
+
+.co_send {
+  display: inline-block;
+  margin-top: 50px;
+  border: solid 3px #ffff1a ;
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  margin-left: 50px;
+  border-radius: 4px;
+}

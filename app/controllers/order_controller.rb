@@ -1,6 +1,4 @@
 class OrderController < ApplicationController
-  before_action :create_params, only: [:confirm]
-
   def index
   end
 
@@ -9,19 +7,21 @@ class OrderController < ApplicationController
   end
 
   def confirm
-    return if @order.valid?
-    render :new
-  end
-
-  def back
-    render :new
+    @order = Order.new(create_params)
+    if @order.valid?
+      render :action => 'confirm'
+    else
+      render :action => 'new'
+    end
   end
 
   def create
+    @order = Order.new(create_params)
     if @order.save
-      render 'index'
+      OrderMailer.received_email(@order).deliver_now
+      redirect_to root_path
+      flash[:notice] = "申し込みが完了しました。"
     else
-      
       render 'new'
     end
   end
@@ -29,9 +29,8 @@ class OrderController < ApplicationController
   private
 
   def create_params
-    @order = Order.new(params.require(:order).permit(:tshirt,:shirt,:suit,:sweater,:cardigan,:blouse,:othertops,:pants,:skirt,:onepiece,:address,:receivetime,:tel))
+    params.require(:order).permit(:tshirt,:shirt,:suit,:sweater,:cardigan,:blouse,:othertops,:pants,:skirt,:onepiece,:address,:receivetime,:tel)
   end
 
-  def create_infomation
-  end
+  
 end

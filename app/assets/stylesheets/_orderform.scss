@@ -11,6 +11,7 @@
     font-size: 25px;
     font-weight: bold;
     color: #ffffff;
+    margin-bottom: 20px;
   }
 }
 .order_form {
@@ -42,7 +43,9 @@
       text-align: center;
     }
   }
-
+  .field_form {
+    margin-left: 35px;
+  }
   .field {
     display: flex;
     margin-bottom: 7px;
@@ -154,4 +157,5 @@
   background-color: #00aaff;
   color: white;
   font-weight: bold;
+  border-radius: 4px;
 }

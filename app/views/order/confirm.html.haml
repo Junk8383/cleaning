@@ -1,0 +1,51 @@
+.co_body
+  .co_content
+    %h4 ご注文内容確認
+    .co_sum
+      %h6 お支払い合計金額
+    = @order.sum_of_price
+    円
+    .co_address
+      %h6 お受け取り先ご住所
+    = @order.address
+    .co_time
+      %h6 お伺いする時間帯
+    = @order.receivetime
+    .co_tel
+      %h6 ご連絡先
+    = @order.tel
+    %h5 以上の内容でお間違いがなければ送信ボタンを押してください。
+  .co_form
+    = form_for @order,url: new_order_path do |f|
+      = f.hidden_field :tshirt
+      = f.hidden_field :shirt
+      = f.hidden_field :suit
+      = f.hidden_field :sweater
+      = f.hidden_field :cardigan
+      = f.hidden_field :blouse
+      = f.hidden_field :othertops
+      = f.hidden_field :pants
+      = f.hidden_field :skirt
+      = f.hidden_field :onepiece
+      = f.hidden_field :price
+      = f.hidden_field :address
+      = f.hidden_field :receivetime
+      = f.hidden_field :tel
+      = f.submit "入力画面に戻る",class: "co_back"
+
+    = form_for @order,url: order_index_path do |f|
+      = f.hidden_field :tshirt
+      = f.hidden_field :shirt
+      = f.hidden_field :suit
+      = f.hidden_field :sweater
+      = f.hidden_field :cardigan
+      = f.hidden_field :blouse
+      = f.hidden_field :othertops
+      = f.hidden_field :pants
+      = f.hidden_field :skirt
+      = f.hidden_field :onepiece
+      = f.hidden_field :price
+      = f.hidden_field :address
+      = f.hidden_field :receivetime
+      = f.hidden_field :tel
+      = f.submit "送信",class: "co_send"
