@@ -3,8 +3,7 @@ class OrderMailer < ApplicationMailer
  
   def received_email(order)
     @order = order
-    mail to: "sksk14@icloud.com"
-    mail(subject: 'webサイトよりメッセージが届きました') do |format|
+    mail(subject: 'webサイトよりメッセージが届きました',to: "sksk14@icloud.com") do |format|
       format.text
     end
   end

@@ -1,5 +1,6 @@
 class OrderController < ApplicationController
   def index
+    @order = Order.new
   end
 
   def new
@@ -18,7 +19,7 @@ class OrderController < ApplicationController
   def create
     @order = Order.new(create_params)
     if @order.save
-      OrderMailer.received_email(@order).deliver_now
+      OrderMailer.received_email(@order).deliver
       redirect_to root_path
       flash[:notice] = "申し込みが完了しました。"
     else
@@ -31,6 +32,5 @@ class OrderController < ApplicationController
   def create_params
     params.require(:order).permit(:tshirt,:shirt,:suit,:sweater,:cardigan,:blouse,:othertops,:pants,:skirt,:onepiece,:address,:receivetime,:tel)
   end
-
   
 end

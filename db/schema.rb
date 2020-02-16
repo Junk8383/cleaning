@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20191216100527) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.integer  "tel"
+<<<<<<< Updated upstream
+=======
+    t.integer  "postcode"
+    t.integer  "prefecture_code"
+    t.string   "address_city"
+    t.string   "address_street"
+    t.string   "address_building"
+>>>>>>> Stashed changes
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

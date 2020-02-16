@@ -15,9 +15,80 @@
       %li ワンピース・・・・・・・(税込) 1,230円
     %h4 ※こちらはご来店価格になります。配達でのご利用は合計金額+500円頂戴いたします。なお、2000円以上ご利用の場合は無料でご利用いただけます。
   .price_ca
-    .simulater_t
-      料金シミュレーター
+    %h3  料金シミュレーター
     .simulater_c
-      料金のお見積もりができます。下記のリンクからご確認ください。
-      .sim_btn
-        確認
+      = form_for order_index_path name: "form1" do |f|
+        %p １ 注文を選択してください
+        %ul.field_form
+          %li.field
+            .field-label
+              = f.label :tshirt,"Tシャツ   :"
+            .field-input{data:{price: 110}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox",class: "field-num", id: "jsNum1"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"シャツ   :"
+            .field-input{data:{price: 110}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox2",class: "field-num", id: "jsNum2"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"スーツ上下   :"
+            .field-input{data:{price: 1610}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox3",class: "field-num", id: "jsNum3"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"セーター   :"
+            .field-input{data:{price: 590}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox4",class: "field-num", id: "jsNum4"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"カーディガン   :"
+            .field-input{data:{price: 780}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "goods5",class: "field-num", id: "jsNum5"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"ブラウス   :"
+            .field-input{data:{price: 550}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox6",class: "field-num", id: "jsNum6"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"その他トップス   :"
+            .field-input{data:{price: 410}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox7",class: "field-num", id: "jsNum7"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"パンツ   :"
+            .field-input{data:{price: 660}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox8",class: "field-num", id: "jsNum8"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"スカート   :"
+            .field-input{data:{price: 660}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox9",class: "field-num", id: "jsNum9"
+              個
+              
+          %li.field
+            .field-label
+              = f.label :tshirt,"ワンピース   :"
+            .field-input{data:{price: 1230}}
+              = f.number_field :tshirt,value: 0,min: 0,name: "textbox10",class: "field-num", id: "jsNum10"
+              個
+          .sum-price
+            %span 合計:  
+            %input{name: "textbox2", id: "total_price", readonly: "readonly"}
